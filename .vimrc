@@ -122,4 +122,4 @@ set visualbell
 
 set listchars=tab:>-,trail:·,eol:$
 
-
+call pathogen#infect()
