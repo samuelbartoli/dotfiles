@@ -97,6 +97,9 @@ nmap <silent> <leader>s :set nolist!<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
+"Toggles the visibility of the tree (NerdTree)
+nmap \e :NERDTreeToggle<CR>
+
 """"""""""""""""""""""""""""""""""""""""""
 
 " Comments in C
@@ -122,4 +125,7 @@ set visualbell
 
 set listchars=tab:>-,trail:·,eol:$
 
+"Setting syntastic 
 call pathogen#infect()
+
+
