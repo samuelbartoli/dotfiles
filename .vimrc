@@ -81,8 +81,9 @@ map <S-l> gt
 noremap qa :wall<return>:mksession! vimsesion<return>:wqall<return>
 
 "Toggles paste mode
-:nmap \l :setlocal number!<CR>
+:nmap \o :set paste! <CR>
 
+nmap <silent> <leader>s :set nolist!<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
@@ -111,5 +112,4 @@ set visualbell
 
 set listchars=tab:>-,trail:·,eol:$
 
-nmap <silent> <leader>s :set nolist!<CR>
 
