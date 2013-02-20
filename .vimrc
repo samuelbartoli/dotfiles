@@ -41,10 +41,20 @@ set showmatch
 " increase command memory
 set history=100
 
-nohlsearch
 
-"jumps to search word as you type
+""""""""""""""""""""""""""""""""""""""""""
+" SEARCHING  
+
+"highlights as you type an expression"
 set incsearch 
+
+" Make searches case-sensitive except when you include upper-case characters 
+" (foo matches FOO and fOo, but /FOO only matches the former) 
+set ignorecase 
+set smartcase
+
+set hlsearch
+:nmap \q :nohlsearch<CR>
 
 "Menu con los archivos existentes en el directorio actual.
 set wildmenu
