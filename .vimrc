@@ -8,7 +8,7 @@
 " snipmate - snippets
 " tagbar - no working
 
-"""""""""""""""""
+""""""""""""""""""
 
 " Always use comma as the leader
 let mapleader=","
