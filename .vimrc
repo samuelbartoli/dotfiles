@@ -9,7 +9,6 @@
 " tagbar - no working
 
 """""""""""""""""
-nmap <F8> :TagbarToggle<CR>
 
 " Always use comma as the leader
 let mapleader=","
@@ -65,22 +64,34 @@ set shiftwidth=2
 "Expand TABS to spaces 
 set expandtab
 
-"tamano de linea igual a 80 caracteres
-set textwidth=80
+"
 let &titleold=getcwd()
 
-"Maps para switch entre los splits. Util!
+""""""""""""""""""""""""""""""""""""""""""
+" MAPS 
+" Switch between tabs
 map <tab>h <C-w>h
 map <tab>l <C-w>l
 map <tab>k <C-w>k
 map <tab>j <C-w>j
 map <S-j> gT
 map <S-l> gt
+
+"Close all tabs and save the session 
 noremap qa :wall<return>:mksession! vimsesion<return>:wqall<return>
 
-"Para los comentarios en C
+"Toggles paste mode
+:nmap \l :setlocal number!<CR>
+
+
+nmap <F8> :TagbarToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""
+
+" Comments in C
 set fo=croq
 
+"Set the cursor line
 set cursorline
 
 filetype plugin on
@@ -99,4 +110,6 @@ set ruler
 set visualbell
 
 set listchars=tab:>-,trail:·,eol:$
+
 nmap <silent> <leader>s :set nolist!<CR>
+
