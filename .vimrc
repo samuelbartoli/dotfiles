@@ -10,7 +10,6 @@
 
 """""""""""""""""
 
-
 " Always use comma as the leader
 let mapleader=","
 
