@@ -8,7 +8,15 @@
 " snipmate - snippets
 " tagbar - no working
 
+"Setting syntastic 
+call pathogen#infect()
+
+" Setting Ctrlp (finder pro)
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 """"""""""""""""""""""""""""""""
+"CSS auto-complete every time opening a CSS file
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 
 " Always use comma as the leader
 let mapleader=","
@@ -59,8 +67,6 @@ set hlsearch
 "Menu con los archivos existentes en el directorio actual.
 set wildmenu
 
-" ESC is now jj 
-imap jj <ESC>
 
 "Poner un tab a 2 espacios
 set tabstop=2
@@ -93,12 +99,16 @@ noremap qa :wall<return>:mksession! vimsesion<return>:wqall<return>
 "Toggles paste mode
 :nmap \o :set paste! <CR>
 
+"The leader is now ','
 nmap <silent> <leader>s :set nolist!<CR>
 
 nmap <F8> :TagbarToggle<CR>
 
 "Toggles the visibility of the tree (NerdTree)
 nmap \e :NERDTreeToggle<CR>
+
+" ESC is now jj 
+imap jj <ESC>
 
 """"""""""""""""""""""""""""""""""""""""""
 
@@ -124,8 +134,3 @@ set ruler
 set visualbell
 
 set listchars=tab:>-,trail:·,eol:$
-
-"Setting syntastic 
-call pathogen#infect()
-
-
